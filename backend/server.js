@@ -14,6 +14,7 @@ app.use(express.urlencoded({ extended: false }))
 
 
 app.use("/api/goals", require("./routes/goalRoutes"))
+app.use("/api/users", require("./routes/userRoutes"))
 
 // NOTE: error middleware needs to be below the routes only then defualt error handler is overidden
 app.use(errorHandler);

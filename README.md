@@ -20,4 +20,12 @@
  npm install
  ```
 
- 
+
+## Notes
+
+Following error occurs when server is sending response more than once. Just note so in user controller I was calling `res.json()` twice and that's why this error was poping up. 
+```
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+```
+
+Resource where I found why that was happening [LINK](https://bobbyhadz.com/blog/javascript-error-cannot-set-headers-after-they-are-sent-to-client)
