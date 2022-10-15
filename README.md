@@ -8,6 +8,8 @@
 
  One more thing, in this video series brad will use react for frontend but I will be changing that and instead I will be using [Qwik](https://qwik.builder.io/). I wanted to try Qwik for last few weeks but I didn't get a chance so here I am going to use that.
 
+ Update: I am just going to create frontend with react for now. As I have to create project based on this for the NEAR metabuild hackathon. Afterward I can create frontend using Qwik
+
  ---
 
  ## Installation
@@ -20,7 +22,7 @@
  npm install
  ```
 
-
+---
 ## Notes
 
 Following error occurs when server is sending response more than once. Just note so in user controller I was calling `res.json()` twice and that's why this error was poping up. 
