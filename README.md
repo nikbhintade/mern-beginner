@@ -23,6 +23,21 @@
  ```
 
 ---
+## Deployment 
+
+Currently this API is deployed on [render](render.com).
+
+**Link :** [https://mern-auth.onrender.com](https://mern-auth.onrender.com)
+
+***Notes:***
+
+There was issue with inital deployment due to not setting environment variables and not having health endpoint.
+
+First one is just thing that I completely forgot.
+
+Second one, I think is specific to render. So for some context, render need an endpoint that returns 200. This may have caused a `in-progress` status till build fails. After adding that endpoint deployment happened successfully.
+
+------
 ## Notes
 
 Following error occurs when server is sending response more than once. Just note so in user controller I was calling `res.json()` twice and that's why this error was poping up. 
@@ -31,3 +46,4 @@ Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the cli
 ```
 
 Resource where I found why that was happening [LINK](https://bobbyhadz.com/blog/javascript-error-cannot-set-headers-after-they-are-sent-to-client)
+
