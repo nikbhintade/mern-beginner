@@ -15,6 +15,8 @@ const protect = asyncHandler(async(req, res, next) => {
             const decoded = jwt.verify(token, process.env.JWT_SECRET)
 
             //get user from the user
+            // in select the argument with `-` means exclude that field
+            // ref: https://mongoosejs.com/docs/api.html#query_Query-select
             req.user = await User.findById(decoded.id).select('-password')
 
             next()
